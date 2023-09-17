@@ -6,11 +6,15 @@ import "../assets/tailwind.css"
 import { Header } from "../components/Header";
 import { Navbar } from "../components/Navbar";
 
+
 export function Home() {
     return (
         <div>
             <Navbar/>
-            <Header />
+            <Header 
+                title='Aplicaciones Web Orientadas a Servicios'
+                author={false}
+            />
             <h1>Home</h1>
         </div>
     )

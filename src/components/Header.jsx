@@ -1,12 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import "../assets/tailwind.css";
 
-export function Header() {
+export function Header({ title = "Fundamentos de JavaScript", author = true }) {
     return (
         <header className="hd-container">
-            <h1>Fundamentos de JavaScript</h1>
-            <p>Elaborado por: <strong>Eli Haziel Ortiz Ramirez</strong></p>
+            <h1>{ title }</h1>
+            {/* Condicion para Renderizar el Parrafo {condition && < Element />} */}
+            {author && <p className='text-slate-300'>Elaborado por: <strong>Eli Haziel Ortiz Ramirez</strong></p>}
         </header>
     )
 }

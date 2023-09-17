@@ -42,6 +42,8 @@
     .nv-menu {
         @apply
         flex
+        justify-evenly
+        w-[240px]
         gap-10
         px-8
         border-r-2
