@@ -1,0 +1,69 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Import Tailwind CSS */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+@layer components {
+    body {
+        @apply bg-zinc-700;
+    }
+    /* Nav Bar */
+    .nv-container {
+        @apply 
+        w-full
+        px-[12px]
+        backdrop-blur-3xl  
+        bg-slate-400/10
+        border-b
+        border-slate-900/10
+        flex
+        flex-row
+        justify-between
+        items-center
+    }
+
+    .nv-logo {
+        @apply
+        flex
+        items-center
+    }
+
+    .nv-contact {
+        @apply
+        w-[68px]
+        px-[5px] py-[3px]
+        flex
+        items-center
+        justify-around
+        bg-white
+        rounded-full
+    }
+
+    .nv-menu-container {
+        @apply
+       group
+       relative
+    }
+
+    .nv-btn-menu {
+        @apply
+        bg-gray-300 text-gray-700 py-4 px-6 rounded inline-flex items-center group
+    }
+
+    /* Header */
+    .hd-container {
+        @apply 
+        w-full
+         font-bold;
+    }
+
+    .hd-container > h1 {
+        @apply text-amber-500 text-4xl font-extrabold;
+    }
+
+    
+}
