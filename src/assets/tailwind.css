@@ -9,60 +9,86 @@
 
 @layer components {
     body {
-        @apply bg-zinc-700;
+        @apply antialiased bg-slate-900;
     }
     /* Nav Bar */
     .nv-container {
         @apply 
         w-full
+        h-14
         px-[12px]
         backdrop-blur-3xl  
-        bg-slate-400/10
-        border-b
-        border-slate-900/10
+        bg-gray-900
+        border-b-2
+        border-slate-600/50
+        text-slate-400
+        font-bold
         flex
         flex-row
-        justify-between
         items-center
+        justify-between
     }
 
     .nv-logo {
         @apply
+        h-full
+        px-3
         flex
         items-center
+        text-white
+        bg-slate-300/20
+    }
+
+    .nv-menu {
+        @apply
+        flex
+        gap-10
+        px-8
+        border-r-2
+        border-l-2
+        border-slate-500
+        self-center
+    }
+    
+    .nv-menu > li {
+        @apply
+        rounded-full
+        border-slate-900/40
+        
+        hover:scale-105 
+        hover:underline
+        hover:text-slate-300
     }
 
     .nv-contact {
         @apply
-        w-[68px]
-        px-[5px] py-[3px]
-        flex
+        w-[5rem]
         items-center
-        justify-around
-        bg-white
-        rounded-full
+        flex
+        justify-evenly
+        text-white bg-white focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm py-1
     }
 
-    .nv-menu-container {
+    .nv-contact > a {
         @apply
-       group
-       relative
+        hover:scale-110
+        active:scale-95
     }
-
-    .nv-btn-menu {
-        @apply
-        bg-gray-300 text-gray-700 py-4 px-6 rounded inline-flex items-center group
-    }
-
+    
     /* Header */
     .hd-container {
         @apply 
+        flex
+        flex-col
+        items-center
         w-full
-         font-bold;
+        pt-10
+        pb-10
+        bg-white/10
     }
 
     .hd-container > h1 {
-        @apply text-amber-500 text-4xl font-extrabold;
+        @apply text-sky-500 text-3xl font-extrabold leading-6 pb-2;
     }
 
     
