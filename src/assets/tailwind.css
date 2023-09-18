@@ -11,87 +11,60 @@
     body {
         @apply antialiased bg-slate-900;
     }
+
     /* Nav Bar */
     .nv-container {
-        @apply 
-        w-full
-        h-14
-        px-[12px]
-        backdrop-blur-3xl  
-        bg-gray-900
-        border-b-2
-        border-slate-600/50
-        text-slate-400
-        font-bold
-        flex
-        flex-row
-        items-center
-        justify-between
+        @apply w-full h-14 px-[12px] backdrop-blur-3xl bg-gray-900 border-b-2 border-slate-600/50 text-slate-400 font-bold flex flex-row items-center justify-between
     }
 
     .nv-logo {
-        @apply
-        h-full
-        px-3
-        flex
-        items-center
-        text-white
-        bg-slate-300/20
+        @apply h-full px-3 gap-2 flex items-center text-white bg-slate-300/20
     }
 
     .nv-menu {
-        @apply
-        flex
-        justify-evenly
-        w-[240px]
-        gap-10
-        px-8
-        border-r-2
-        border-l-2
-        border-slate-500
-        self-center
+        @apply flex justify-evenly w-[25%] border-r-2 border-l-2 border-slate-500 self-center
     }
-    
-    .nv-menu > li {
-        @apply
-        rounded-full
-        border-slate-900/40
-        
-        hover:scale-105 
-        hover:underline
-        hover:text-slate-300
+
+    .dropdown {
+        @apply px-6 flex items-center justify-center gap-1 relative hover:bg-slate-700/50
+    }
+
+    .dropdown>span {
+        @apply flex
+    }
+
+    .transition-transform {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .dropdown-menu {
+        @apply bg-slate-700 justify-center w-full py-2 rounded-bl-md rounded-br-md
+    }
+
+    .dropdown-menu>li {
+        @apply text-center text-slate-400 hover:scale-105 hover:text-slate-300 hover:underline mb-1
+    }
+
+    .nv-menu>li:first-child {
+        @apply border-white/40 px-6 hover:scale-105 hover:underline hover:text-slate-300
     }
 
     .nv-contact {
-        @apply
-        w-[5rem]
-        items-center
-        flex
-        justify-evenly
-        text-white bg-white focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm py-1
+        @apply w-[5rem] items-center flex justify-evenly text-white bg-white focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm py-1
     }
 
-    .nv-contact > a {
-        @apply
-        hover:scale-110
-        active:scale-95
+    .nv-contact>a {
+        @apply hover:scale-110 active:scale-95
     }
-    
+
     /* Header */
     .hd-container {
-        @apply 
-        flex
-        flex-col
-        items-center
-        w-full
-        pt-10
-        pb-10
-        bg-white/10
+        @apply flex flex-col items-center w-full pt-10 pb-10 bg-white/10
     }
 
-    .hd-container > h1 {
+    .hd-container>h1 {
         @apply text-sky-500 text-3xl font-extrabold leading-6 pb-2;
     }
 
-    
+
 }

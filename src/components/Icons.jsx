@@ -72,3 +72,11 @@ export function ReactIcon({ color, width, height }) {
         </Icon>
     );
 }
+export function DownArrowIcon({ color, width, height }) {
+    return (
+        <Icon color={color} width={width} height={height}>
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M6 9l6 6l6 -6"></path>
+        </Icon>
+    );
+}
