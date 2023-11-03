@@ -10,7 +10,7 @@ const bg9 = 'radial-gradient(circle, rgba(95,251,63,1) 0%, rgba(70,252,174,0.907
 
 const style9 = `background: ${bg8}; color: white; border-radius: 12px; padding: 4px; font-size: 1.0rem; font-weight: bold;`;
 const reto9 = `background: red; color: white; border-radius: 12px; padding: 4px 3px;margin-left: 20px; font-size: 1.0rem; font-weight: bold;`;
-const subStyle9 = `background: red; color: white; border-radius: 12px; padding: 4px 3px;margin-left: 20px; font-size: 1.0rem; font-weight: bold;`;
+const subStyle9 = `background: black; color: white; border-radius: 12px; padding: 4px 3px;margin-left: 20px; font-size: 1.0rem; font-weight: bold;`;
 
 // Personalizacion de las Salidas en consola
 console.warn(" ----- Practica 09: Funciones en JavaScript -----");
@@ -61,7 +61,7 @@ console.log(`El resultado de la multiplicación es: ${multiplicar(5)}`);
 
 
 console.log("%c1.4.- Cuando retornan un resultado de tipo objeto", style9);
-function saludoHora(persona, hora = new Date(), saludoHora) {
+function saludoHora(persona, hora = new Date(), saludo) {
     // console.log(`La hora actual es: ${hora.getHours()}:${hora.getMinutes()}:${hora.getSeconds()}`);
     let horas = hora.getHours(), minutos = hora.getMinutes(), segundos = hora.getSeconds();
     if (horas >= 6 && horas < 12) {
@@ -71,11 +71,12 @@ function saludoHora(persona, hora = new Date(), saludoHora) {
     } else {
         saludo = "Buenas Noches"
     }
-    return [persona, horas, ${saludo}, ${persona}]
+    console.log(`La hora acctual es: ${horas}:${hora.getMinutes()}:${hora.getSeconds()}`);
+    return [persona, hora, `${saludo}, ${persona}`]
 }
 
 let saludo = saludoHora("Juan");
 console.table(saludo);
 
 let [,,saludoWeb] = saludo;
-console.log(saludoWeb ||);
+console.log(saludoWeb);

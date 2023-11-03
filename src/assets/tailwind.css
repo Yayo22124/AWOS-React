@@ -8,21 +8,59 @@
 
 
 @layer components {
+    /* Extras */
+    .shadow {
+        @apply
+        shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)]
+    }
+
+    .key {
+        @apply
+        bg-slate-500/30
+        py-2
+        px-4
+        rounded-xl
+        text-slate-400
+    }
+
+    .alerta {
+        @apply
+        p-1 text-center text-white uppercase text-[20px] z-30
+        absolute
+    }
+
+    .alerta.error {
+        @apply
+        bg-rose-500
+    }
+
+    .alerta.exito {
+        @apply
+        bg-green-500
+    }
+
+    /* global styles */
     body {
         @apply antialiased bg-slate-900;
     }
 
     /* Nav Bar */
+    
+    .active {
+        @apply
+        underline
+    }
+
     .nv-container {
         @apply w-full h-14 px-[12px] backdrop-blur-3xl bg-gray-900 border-b-2 border-slate-600/50 text-slate-400 font-bold flex flex-row items-center justify-between
     }
 
     .nv-logo {
-        @apply h-full px-3 gap-2 flex items-center text-white bg-slate-300/20
+        @apply h-full px-3 gap-2 flex items-center text-white bg-slate-300/20 hidden md:flex
     }
 
     .nv-menu {
-        @apply flex justify-evenly w-[25%] border-r-2 border-l-2 border-slate-500 self-center
+        @apply flex justify-evenly border-r-2 border-l-2 border-slate-500 self-center
     }
 
     .dropdown {

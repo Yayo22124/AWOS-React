@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------
 //                          Repaso de JavaScript
-// Practica 08:  en JavaScript
+// Practica 08: Iteradores en JavaScript
 // Realizado por: Eli Haziel Ortiz Ramirez 220087 4B DSM
 // 
 // --------------------------------------------------------------------------------
@@ -12,7 +12,7 @@ const style8 = `background: ${bg8}; color: white; border-radius: 12px; padding: 
 const subStyle8 = `background: red; color: white; border-radius: 12px; padding: 4px 3px;margin-left: 20px; font-size: 1.0rem; font-weight: bold;`;
 
 // Personalizacion de las Salidas en consola
-console.warn(" ----- Practica 08:  en JavaScript -----");
+console.warn(" ----- Practica 08: Iteradores en JavaScript -----");
 
 // Declaración de un Arreglo 
 console.log("%c1.- Utilizando el Bucle FOR", style8);
@@ -24,6 +24,11 @@ for (let i = 0; i < tecnologias.length; i++) {
 
 //Reto WHILE :)
 console.log("%c1.2.- RETO WHILE", subStyle8);
+let i = 0;
+while(i < tecnologias.length) {
+    console.log(`Elemento en la posición reto WHILE: ${i}: ${tecnologias[i]}`);
+    i++;
+}
 
 // Utilizando un bucle(ciclo) FOREACH - Para cada
 console.log("%c2.- Utilizando el Bucle FOREACH", style8);
@@ -32,8 +37,12 @@ tecnologias.forEach((elemento) => console.log(`Elemento en la posicion ?? : ${el
 
 // Reto FOREACH
 console.log("%c1.2.- RETO FOREACH", subStyle8);
-tecnologias.forEach((elemento,i) => console.log(`Elemento en la posicion ?? : ${elemento}`));
-tecnologias.forEach((elemento) => console.log(`Elemento en la posicion ${tecnologias.indexOf(elemento)} : ${elemento}`));
+console.log("Solucion a)")
+tecnologias.forEach((elemento,i)=> console.log(`Elemento en la posicion ${i}:${elemento}`));
+console.log("Solucion b)");
+
+/*Otra Opción de como realizar lo anterior */
+tecnologias.forEach((elemento) =>  console.log(`Elemento en la posicion ${tecnologias.indexOf(elemento)} :${elemento}`));
 
 // MAP
 console.log("%c3.- Utilizando MAP para transformar los elementos", style8);

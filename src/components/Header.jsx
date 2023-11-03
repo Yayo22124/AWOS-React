@@ -1,12 +1,17 @@
 import React from 'react';
 import "../assets/tailwind.css";
 
-export function Header({ title = "Fundamentos de JavaScript", author = true }) {
+export const Header = (props) => {
+    // Props
+    const title = props.title || "Fundamentos de JavaScript";
+    const author = !props.author || true;
+
     return (
-        <header className="hd-container">
-            <h1>{ title }</h1>
+        <header className="hd-container mb-6">
+            <h1 className='mb-4 max-w-[70%] text-center leading-8'>{ props.title }</h1>
             {/* Condicion para Renderizar el Parrafo {condition && < Element />} */}
-            {author && <p className='text-slate-300'>Elaborado por: <strong>Eli Haziel Ortiz Ramirez</strong></p>}
+            {props.author && <p className='text-slate-300'>Elaborado por: <strong>Eli Haziel Ortiz Ramirez</strong></p>}
+            {props.children}
         </header>
     )
 }
